@@ -7,11 +7,11 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 
 var config = {
-    user: 'coco98',
-    database: 'coco98',
+    user: 'banimohanty',
+    database: 'banimohanty',
     host: 'db.imad.hasura-app.io',
     port: '5432',
-    password: process.env.DB_PASSWORD
+    password:db-banimohanty-32304
 };
 
 var app = express();
