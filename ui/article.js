@@ -1,7 +1,6 @@
 // Eg: coco98.imad.hasura-app.io/articles/article-one will result in article-one
 var currentArticleTitle = window.location.pathname.split('/')[2];
-loadLogin();
-loadComments();
+
 function loadCommentForm () {
     var commentFormHtml = `
         <h5>Submit a comment</h5>
@@ -42,7 +41,8 @@ function loadCommentForm () {
         
     };
 }
-
+loadLogin();
+loadComments();
 function loadLogin () {
     // Check if the user is already logged in
     var request = new XMLHttpRequest();
