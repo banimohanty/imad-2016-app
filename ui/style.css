@@ -1,46 +1,102 @@
-body {
-    font-family: sans-serif;
-    margin-top: 60px;
+.row-header{
+    margin:0px auto;
+    padding:0px auto;
 }
 
-.center {
-    text-align: center;
+.row-content {
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 1px ridge;
+    min-height:400px;
 }
 
-.text-big {
-    font-size: 300%;
+.row-footer{
+    background-color: #AfAfAf;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
 }
 
-.bold {
-    font-weight: bold;
+.slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;	
+      animation-duration: 1s;	
+      -webkit-animation-duration: 1s;
+      visibility: visible;			
+  }
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
 }
 
-.img-medium {
-    height: 200px;
+
+.jumbotron {
+    padding:70px 30px 70px 30px;
+    margin:0px auto;
+    background: #7986CB ;
+    color:floralwhite;
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    color: #4a4a4a;
-    font-family: sans-serif;
-    padding-left: 20px;
-    padding-right: 20px;
+address{
+    font-size:80%;
+    margin:0px;
+    color:#0f0f0f;
+}
+body{
+    padding:50px 0px 0px 0px;
+    z-index:0;
 }
 
-.comment {
-    margin-left: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;
+.navbar-inverse {
+     background: #303F9F;
 }
 
-.commenter {
-    font-style: italic;
-    font-size: 0.8em;
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+    color: #fff;
+    background: #1A237E;
 }
 
-#comment_form {
-    margin-left: 10px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #ccc;
+.navbar-inverse .navbar-nav > .open > a,
+ .navbar-inverse .navbar-nav > .open > a:hover,
+ .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background: #1A237E;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu> li> a,
+.navbar-inverse .navbar-nav .open .dropdown-menu {
+    background-color: #303F9F;
+    color:#eeeeee;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu> li> a:hover {
+    color:#000000;
+}
+
+.affix {
+    top:100px;
+}
+
+
+.carousel {
+    background:#1A237E;
+}
+.carousel .item {
+  height: 300px;
+}
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+
+#carouselButtons {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
 }
