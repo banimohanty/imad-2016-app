@@ -28,10 +28,9 @@ body {
 		<nav>
 			<div class="nav-wrapper"> <a href="#!" class="brand-logo">Fusion</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 				<ul class="right hide-on-med-and-down">
-					<li><a href="#">Change Password</a>
-					</li>
-					<li><a href="/logout">Logout</a>
-					</li>
+					<div id="login_area">
+                <center>Loading login status...</center>
+            </div>
 				</ul>
 			
 			</div>
@@ -124,6 +123,9 @@ body {
 	<script>
 
 	 $(document).ready(function(){
+	     		$('select').material_select();
+		$('.modal-trigger').leanModal();
+			$('.scrollspy').scrollSpy();
       $('.carousel').carousel();
     });
 		
