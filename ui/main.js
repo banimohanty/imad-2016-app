@@ -1,21 +1,21 @@
 function loadLoginForm () {
     var loginHtml = `
-        <div class="row">
-        <div class="col l3">
-        <h5>Login/Register</h5>
-        </div>
-          <div class="col l2" >
-        <input type="text" id="username" placeholder="username" style="text-color:black" />
-        </div>
-          <div class="col l2">
-        <input type="password" id="password" placeholder="password" />
-         </div>
-          <div class="col l2">
-        <input type="submit" id="login_btn" value="Login" />
-         </div>
-          <div class="col l2">
-        <input type="submit" id="register_btn" value="Register" />
-        </div>
+      <div class=" row">
+            <h4 class="col s12 m8 offset-m2">Login/Register</h4>
+            <div class="col s12 m8 offset-m2">
+                <div class="input-field col s6">
+                <input placeholder="username" id="username" type="text" class="validate">
+                <label for="username">Username</label> 
+                </div>
+            
+                <div class="input-field col s6">
+                <input placeholder="password" id="password" type="password" class="validate">
+                <label for="password">Password</label> 
+                </div>
+            
+                <input type="submit" id="login_btn" value="Login" class="waves-effect btn col s12 m2 offset-m3"/> &nbsp
+                <input type="submit" id="register_btn" value="Register" class="waves-effect btn col s12 m2 offset-m2"/>
+            </div>
         </div>
         `;
     document.getElementById('login_area').innerHTML = loginHtml;
@@ -93,14 +93,7 @@ function loadLoginForm () {
 function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
-        <div class="row">
-        <div class="col l4">
-        <h5> Hi <i>${username}</i></h5>
-        </div>
-        <div class="col l3">
-        <a href="/logout">Logout</a>
-        </div>
-        </div>
+        Hi ${username} <a style="display:inline-block" href="/logout">Logout</a>
     `;
 }
 
