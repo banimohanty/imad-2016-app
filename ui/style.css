@@ -231,12 +231,12 @@ header ul li a{
 .side-nav.fixed{
     padding-top: 70px;
     width: 220px; 
-    background-color: #333;
+    background-color: #255;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 .side-nav.fixed li a{
-    color: rgba(255,255,255,0.85);
+    color: rgba(0,0,0,0.85);
     font-size: 13px;
     transition: 400ms;
     letter-spacing: 0.5px;
