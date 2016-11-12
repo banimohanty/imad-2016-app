@@ -94,7 +94,7 @@ function loadLoggedInUser (username) {
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
         <div class="row">
-        <div class="col l3">
+        <div class="col l4">
         <h5> Hi <i>${username}</i></h5>
         </div>
         <div class="col l3">
