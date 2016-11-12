@@ -249,7 +249,7 @@ header ul li a{
 }
 
 .side-nav.fixed li a:hover{
-    background-color: rgba(0,0,0,0.15);
+    background-color: rgba(255,255,255,0.15);
 }
 
 .side-nav.fixed .divider{
