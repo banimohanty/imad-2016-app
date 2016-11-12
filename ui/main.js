@@ -4,8 +4,8 @@ function loadLoginForm () {
         <div class="col l3">
         <h5>Login/Register</h5>
         </div>
-          <div class="col l2" style="text-color:black">
-        <input type="text" id="username" placeholder="username" />
+          <div class="col l2" >
+        <input type="text" id="username" placeholder="username" style="text-color:black" />
         </div>
           <div class="col l2">
         <input type="password" id="password" placeholder="password" />
