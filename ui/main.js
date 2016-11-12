@@ -100,6 +100,7 @@ function loadLoggedInUser (username) {
         <div class="col l3">
         <a href="/logout">Logout</a>
         </div>
+        </div>
     `;
 }
 
