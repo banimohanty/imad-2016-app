@@ -1,133 +1,84 @@
 <!doctype html>
-<html lang="en">
+<html>
     <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content ="IE=edge">
-    <meta name = "viewpoint" content ="width=device-width,initial-scale=1">
-    <!--meta http-equiv="Content-Type" content="text/html; charset=windows-1252" -->
-    <title>MADAME</title>
-    <link href="ui/material-icons.css" rel="stylesheet"/>
-	<!--Import materialize.css-->
-	<link rel="stylesheet" href="ui/font-awesome.min.css">
-	<link type="text/css" rel="stylesheet" href="ui/materialize.min.css" />
-
-
-<style>
-body {
-      
-} 
- 
-</style>
-
-    
-        <link href="/ui/style.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Profile and Blog</title>
+        <link href='https://fonts.googleapis.com/css?family=Varela+Round' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link href="/ui/css/normalize.css" rel="stylesheet"/>
+        <link href="/ui/css/style.css" rel="stylesheet"/>
+        <link rel="icon" href="/img/ico.png">
+        <script type="text/javascript" src="/ui/jquery.js"></script><!-- Jquery -->
+        <script type="text/javascript" src="/ui/main.js"></script> <!-- Custom Javascript -->
+     
     </head>
+
     <body>
-        
-        <header>
-		<nav>
-			<div class="nav-wrapper"> <a href="#!" class="brand-logo">Madame</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-				<ul class="right hide-on-med-and-down">
-					<div id="login_area">
-                <center>Loading login status...</center>
-            </div>
-				</ul>
-			
-			</div>
-		</nav>
-	</header>
-<div class="col hide-on-small-only m3 l2">
-			<div class="toc-wrapper pinned">
-			<div style="height: 1px;">
-			<ul class="section table-of-contents">
-        	<li><a href="#perso" class="waves-effect">Gallery</a>
-			</li>
-			<li><a href="#quali" class="waves-effect">Qualification</a>
-			</li>
-			<li><a href="#exper" class="waves-effect">Experience</a>
-			</li>
-			<li><a href="#achie" class="waves-effect">Achievements</a>
-			</li>
-			<li><a href="#resep" class="waves-effect">Research Project</a>
-			</li>
-			<li><a href="#resej" class="waves-effect">Research Journal</a>
-			</li>
-			<li><a href="#consu" class="waves-effect">Consultancy Projects</a>
-			</li>
-			<li><a href="#paten" class="waves-effect">Patents</a>
-			</li>
-			<li><a href="#publi" class="waves-effect">Publication</a>
-			</li>
-			<li><a href="#thesi" class="waves-effect">Thesis</a>
-			</li>
-			<li><a href="#confe" class="waves-effect">Conferences</a>
-			</li>
-			<li><a href="#lectu" class="waves-effect">Lectures</a>
-			</li>
-			
-			<li><a href="#forei" class="waves-effect">Visits</a>
-			</li>
-				</ul>
-			
-			</div>
-			</div>
-		
-		</div>
-	<div class="main-container row" style="background: none; border: none;">
-		
-		<div class="col s12 m10 l10 offset-l1 offset-s1 offset-m1">
-		<br>
-			<div class="card-panel blue-grey lighten-5 z-depth-5">
- 
-       
-       
-          <div class="center">
-              <img id='me' src="/ui/me.jpg" heigth="200" width ="200" /> 
-          </div>
-          
-            <h3>About Me</h3>
-            <div>
-                Hi. My name is Tanmai Gopal<br/>
-                I work at Hasura
-            </div>
-            <hr/>
-            <div id="login_area">
-               
-            </div>
-            
-            <h3>My Articles</h3>
-            <div id="articles">
-                <center>Loading articles...</center>
-            </div>
-            <div class="footer">
-            </div>
-        </div>
-        
-        			
-		</div>
-		
+        <div class="wrap">
+            <header class="main-header">
+                <div class="containerr clearfix">
+                    <h1 class="name"><a href="#">Personal Blog</a></h1>
+                    <ul class="main-nav">
+                        <li><a href="/">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#login_pg" id="login">Login</a></li>
+                        <li><a href="#signup_pg" id="sign_up">Sign Up</a></li>
+                    </ul>
+                </div>
+            </header><!--main-header-->
 
-	</div> 	
+            <div class="banner">
+                <div class="banner_bg"></div>
+                <div class="banner_content">
+                    <h1 class="headline">Sibani Mohanty</h1>
+                    <span class="tagline">Computer Science Engineer </span>
+                </div>
+            </div><!--banner-->
 
-        
-        <script type="text/javascript" src="/ui/main.js">
-        </script>
-       <script src="js/jquery-3.1.1.min.js"></script>
-	<!--Import jQuery before materialize.js-->
-	<script type="text/javascript" src="js/materialize.min.js"></script>
-	<script>
+            <div class="blog_content_con clearfix">
+                <div class="blog_posts" id="blog_pos_con">
+                    <div class="blog_post_header center_con">
+                    <h2>Blog Posts</h2>
+                    <hr>
+                    </div>
+                    <div class="posts" id="posts"> 
+                        <!--This div is empty because it will house the posts fetched from database dynamically -->
+                    </div>
+                </div>
+                <div class="side_banner center_con">
+                    <h2>Side Banner</h2>
+                    <hr>
+                    <button class="about_btn">about me</button>
+                    <div class="my_img">
+                        <img src="#" class="profile_img" alt="my image">
+                    </div>
+                    <hr>
+                    <div class="social_links">
+                        <a href="https://www.facebook.com/banicool" target="_blank"><img src="/ui/img/fb.png" alt="Facebook" class="social_icon"></a>
+						  <a href="https://www.github.com/banimohanty" target="_blank"><img src="/ui/img/github.png" alt="Github" class="social_icon"></a>
+						    <a href="www.linkedin.com/in/sibanimhnty" target="_blank"><img src="/ui/img/linkedin.png" alt="Linkedin" class="social_icon"></a>
+                    
+                    </div>
+                    <hr>
+                    <div id="log_reg">
+                     <!-- Adding Login or Signup -->
 
-	 $(document).ready(function(){
-	     		$('select').material_select();
-		$('.modal-trigger').leanModal();
-			$('.scrollspy').scrollSpy();
-      $('.carousel').carousel();
-    });
-		
-	</script>
-        
+                     <!--TODO: making it dynamic -->
+                     <h3 class="login_pg">Login Page</h3>
+                    <br>
+                    Username<input type="text" id="Username"><br>
+                    Password<input type="password" id="Password"><br>
+                    <input type="submit" id="submit_btn" value="Sign in"></input>
+                    </div>
+                </div>
+            </div> 
+
+        </div><!--wrap -->
+
+    <footer class="main-footer">
+        <span>&copy; Sibani Mohanty </span>
+    </footer>
+    
     </body>
 </html>
-
-
-

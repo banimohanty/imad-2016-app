@@ -1,148 +1,100 @@
-function loadLoginForm () {
-    var loginHtml = `
-        <div class="row">
-        <div class="col l3">
-        <h5>Login/Register</h5>
-        </div>
-          <div class="col l2" >
-        <input type="text" id="username" placeholder="username" style="text-color:black" />
-        </div>
-          <div class="col l2">
-        <input type="password" id="password" placeholder="password" />
-         </div>
-          <div class="col l2">
-        <input type="submit" id="login_btn" value="Login" />
-         </div>
-          <div class="col l2">
-        <input type="submit" id="register_btn" value="Register" />
-        </div>
-        </div>
-        `;
-    document.getElementById('login_area').innerHTML = loginHtml;
-    
-    // Submit username/password to login
-    var submit = document.getElementById('login_btn');
-    submit.onclick = function () {
-        // Create a request object
-        var request = new XMLHttpRequest();
-        
-        // Capture the response and store it in a variable
-        request.onreadystatechange = function () {
-          if (request.readyState === XMLHttpRequest.DONE) {
-              // Take some action
-              if (request.status === 200) {
-                  submit.value = 'Sucess!';
-              } else if (request.status === 403) {
-                  submit.value = 'Invalid credentials. Try again?';
-              } else if (request.status === 500) {
-                  alert('Something went wrong on the server');
-                  submit.value = 'Login';
-              } else {
-                  alert('Something went wrong on the server');
-                  submit.value = 'Login';
-              }
-              loadLogin();
-          }  
-          // Not done yet
-        };
-        
-        // Make the request
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-        console.log(username);
-        console.log(password);
-        request.open('POST', '/login', true);
-        request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username, password: password}));  
-        submit.value = 'Logging in...';
-        
-    };
-    
-    var register = document.getElementById('register_btn');
-    register.onclick = function () {
-        // Create a request object
-        var request = new XMLHttpRequest();
-        
-        // Capture the response and store it in a variable
-        request.onreadystatechange = function () {
-          if (request.readyState === XMLHttpRequest.DONE) {
-              // Take some action
-              if (request.status === 200) {
-                  alert('User created successfully');
-                  register.value = 'Registered!';
-              } else {
-                  alert('Could not register the user');
-                  register.value = 'Register';
-              }
-          }
-        };
-        
-        // Make the request
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-        console.log(username);
-        console.log(password);
-        request.open('POST', '/create-user', true);
-        request.setRequestHeader('Content-Type', 'application/json');
-        request.send(JSON.stringify({username: username, password: password}));  
-        register.value = 'Registering...';
-    
-    };
-}
 
-function loadLoggedInUser (username) {
-    var loginArea = document.getElementById('login_area');
-    loginArea.innerHTML = `
-       <font color="black">Hi ${username}</font> <a style="display:inline-block" href="/logout"> <font color="black">Logout</a></font>
-    `;
-}
-
-function loadLogin () {
-    // Check if the user is already logged in
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function () {
-        if (request.readyState === XMLHttpRequest.DONE) {
-            if (request.status === 200) {
-                loadLoggedInUser(this.responseText);
-            } else {
-                loadLoginForm();
-            }
-        }
-    };
-    
-    request.open('GET', '/check-login', true);
-    request.send(null);
-}
-
-function loadArticles () {
-        // Check if the user is already logged in
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function () {
-        if (request.readyState === XMLHttpRequest.DONE) {
-            var articles = document.getElementById('articles');
-            if (request.status === 200) {
-                var content = '<ul>';
-                var articleData = JSON.parse(this.responseText);
-                for (var i=0; i< articleData.length; i++) {
-                    content += `<li>
-                    <a href="/articles/${articleData[i].title}">${articleData[i].heading}</a>
-                    (${articleData[i].date.split('T')[0]})</li>`;
-                }
-                content += "</ul>"
-                articles.innerHTML = content;
-            } else {
-                articles.innerHTML('Oops! Could not load all articles!')
-            }
-        }
-    };
-    
-    request.open('GET', '/get-articles', true);
-    request.send(null);
-}
+$(document).ready(function () {	
+	//Login form
+	var login_form = `<h3 class="login_pg">Login Page</h3>
+                    <br>
+                    Username<input type="text" id="Username"><br>
+                    Password<input type="password" id="Password"><br>
+                    <input type="submit" id="submit_btn" value="Sign in"></input>`;
 
 
-// The first thing to do is to check if the user is logged in!
-loadLogin();
+      //Sign Up Form
+     var signup_form = `<h3 class="signup_pg">Sign Up Page</h3>
+                    <br>
+                    Username<input type="text" id="New_Username"><br>
+                    Password<input type="password" id="New_Password"><br>
+                    <input type="submit" id="sup_submit_btn" value="Sign Up"></input>`;
+	
+	// For Fetching artilces from database dynamically
 
-// Now this is something that we could have directly done on the server-side using templating too!
-loadArticles();
+	var preq = new XMLHttpRequest();
+
+	//catch the response and store it 
+	preq.onreadystatechange = function(){
+		if(preq.readyState === XMLHttpRequest.DONE){
+			//Take action
+				if (preq.status === 200) {
+					console.log("getting response from db endpoint")
+				var blog_con = preq.responseText;
+				var con = document.getElementById('posts');
+				//$("#").html(blog_con);
+				con.innerHTML = blog_con;
+			}
+		}
+			//Not done
+	};
+
+	//Making a Request
+	preq.open('GET','http://localhost:8080/fetch_blog_posts',true);
+	preq.send(null);
+
+	//------------------------------------------------		
+
+	
+	//For Login page 
+	var but = $('#submit_btn');
+	but.click(function(){
+	var username = document.getElementById('Username').value;
+	var password = document.getElementById('Password').value;;
+	console.log(username);
+	console.log(password);
+	//Create a new response object
+	var req = new XMLHttpRequest();
+
+	//Catch the response and store it in a variable
+		req.onreadystatechange = function(){
+			if(req.readyState === XMLHttpRequest.DONE){
+				//Take action
+					if (req.status === 200) {
+					//
+					console.log('user logged in!');
+					alert('Success!');
+				}
+				else if(req.status == 403){
+					alert('Username/password is incorrect');
+				}
+				else if(req.status == 500){
+					alert('something went wrong on serever');	
+				}
+			}
+				//Not done
+		};
+
+			//Making a Request
+			
+			
+			req.open('POST','http://localhost:8080/login',true);
+			req.setRequestHeader('Content-Type', 'application/json');
+			req.send(JSON.stringify({username: username, password: password}));
+		});
+
+	//-------------------------------------------------------
+
+
+	$('#login').click(function(){
+		var cont = document.getElementById('log_reg');
+		//$('#log_reg').append(login_form);
+		cont.innerHTML = login_form;
+		$('#Username').focus();
+		console.log('added the login form');
+	});	
+
+	$('#sign_up').click(function(){
+		var cont = document.getElementById('log_reg');
+		//$('#log_reg').append(signup_form);
+		cont.innerHTML = signup_form;
+		$('#New_Username').focus();
+	});
+});
+
+

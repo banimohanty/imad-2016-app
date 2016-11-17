@@ -1,0 +1,314 @@
+/* ================================= 
+  Base Element Styles
+==================================== */
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Varela Round', sans-serif;
+	line-height: 1.6;
+	color: #3a3a3a;
+}
+
+p {
+	font-size: .95em;
+	margin-bottom: 1.8em;
+}
+
+h2,
+h3,
+a {
+	color: #093a58;
+}
+
+h2,
+h3 {
+	margin-top: 0;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+/* ================================= 
+  Base Layout Styles
+==================================== */
+
+/* ---- Navigation ---- */
+
+figure {
+	line-height: 0;
+	margin: 0;
+	position: relative;
+}
+
+figcaption{
+	font-size: 0.9em;
+	line-height: 1.5;
+	color: #fff;
+	padding: 1em;
+	background: rgba(19,43,102,.85);
+	position: absolute;
+	bottom: 0;
+	width: 100%
+
+}
+
+.main-nav {
+	margin-top: 5px; 
+}
+
+.name {
+	font-size: 1.25em;
+	margin: 0;
+}
+
+
+.name a,
+.main-nav a {
+	text-align: center;
+	display: block;
+	padding: 10px 15px;
+}
+
+.main-nav a {
+	font-size: 1em;
+	color: #3acec2;
+	text-transform: uppercase;
+	font-family: 'Nunito', sans-serif;
+}
+
+.main-nav a:hover {
+	color: #093a58;
+}
+
+/* ---- Layout Containers ---- */
+
+.banner {
+	background: #efefef;
+	text-align: center;
+	padding: 0;
+	margin-bottom: 10px;
+	height: 303px;	
+	position: relative;
+
+}
+
+.banner_bg {
+	background-image: url('/ui/img/back.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 300px;
+	filter: blur(4px);
+}
+
+.banner_content {
+	position: absolute;
+	color: #fff;
+	font-family: 'Nunito', sans-serif;
+	top: 110px;
+	left: 100px;
+	text-shadow: 0 3px rgba(0,0,0,0.5);
+}
+
+.col {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+
+.main-footer {
+	background: #d9e4ea;
+	padding: 2em 0;
+	text-align: center;
+}
+
+.wrap {
+		min-height: calc(100vh - 52px - 89px);
+	
+	}
+
+.blog_posts {
+	width: 70%;
+	background-color: white;
+	height: 80%;
+	float: left;
+	margin: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	border: solid;
+	
+}
+
+.side_banner {
+	width: 27%;
+	background-color: white;
+	height: 100%;
+	float: right;
+	margin-right: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-radius: 10px;
+	border: solid;
+}
+
+
+.blog_content_con {
+	width: 100%;
+	background-color: white;
+	margin: 0 auto;
+	margin-top: 10px;
+}
+
+.center_con {
+	text-align: center;
+}
+
+.post{
+	padding: 5px 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.post_comments {
+	margin-left: 20px;
+}
+
+/* ---- Page Elements ---- */
+
+.about_btn {
+	text-transform: uppercase;
+	background-color: #efefef;
+	border-radius: 10px;
+	margin-top: 2rem;
+	width: 80%;
+	font-size: 20px;
+}
+
+.my_img {
+	margin: 2rem auto;
+
+}
+
+.profile_img {
+	width: 200px;
+	border-radius: 100%
+
+}
+
+.logo {
+	width: 190px;
+}
+
+.headline {
+	margin-bottom: 0;
+	margin-top: 0;
+	font-size: 2em;
+}
+
+.icon-location {
+	width: 35px;
+	position: absolute;
+	top: -15px;
+	right: -15px;
+
+}
+
+.social_links {
+
+}
+
+.social_icon {
+	margin: auto auto;
+	border-radius: 100%;
+	max-width: 15%
+}
+
+
+/* ================================= 
+  Media Queries
+==================================== */
+
+@media (min-width: 769px) {
+
+	.banner {
+		margin-top: 52px;
+	}
+
+	.main-header {
+		position: fixed;
+		background: #fff;
+		box-shadow: 0 1px 4px rgba(0,0,0,0.5);
+		width: 100%;
+		top: 0;
+		z-index: 1000;
+
+	}
+
+	.containerr {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	/* ---- Float clearfix ---- */
+
+	.clearfix::after {
+		content: " ";
+		display: table;
+		clear: both;
+	}
+
+	.name , .col{
+		float: left;
+	}
+
+	.primary,.secondary {
+		width: 50%;
+	}
+
+	.main-nav {
+		float: right;
+	}
+
+	.main-nav li {
+		display: inline-block;
+		margin-left: 15px;
+	}
+
+	.tagline {
+		font-size: 1.4em;
+	}
+
+	.banner_content {
+		top: 100px;
+		left: 340px;
+	}
+
+}
+
+@media (min-width: 1025px) {
+	.containerr {
+		width: 80%;
+		max-width: 1150px;
+		
+	}
+
+	.primary {
+		width: 40%;
+	}
+
+	.secondary,.tertiary {
+		width: 30%;
+	}
+
+	.banner_content {
+		top: 110px;
+		left: 550px;
+	}
+}
