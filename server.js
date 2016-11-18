@@ -5,7 +5,7 @@ var Pool = require('pg').Pool;
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
 var session = require('express-session');
-
+var fs = require('fs');
 var config = {
     user: 'coco98',
     database: 'coco98',
@@ -21,6 +21,17 @@ app.use(session({
     secret: 'someRandomSecretValue',
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
 }));
+
+
+
+app.get('/ui/resume', function (req, res) {
+    var filePath = "/files/resume.pdf";
+
+    fs.readFile(__dirname + filePath , function (err,data){
+        res.contentType("application/pdf");
+        res.send(data);
+    });
+});
 
 function createTemplate (data) {
     var title = data.title;
@@ -227,18 +238,7 @@ app.get('/articles/:articleName', function (req, res) {
   });
 });
 
-var express = require('express'),
-    fs = require('fs'),
-    app = express();
 
-app.get('/ui/resume', function (req, res) {
-    var filePath = "/files/resume.pdf";
-
-    fs.readFile(__dirname + filePath , function (err,data){
-        res.contentType("application/pdf");
-        res.send(data);
-    });
-});
 
 app.get('/ui/me.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'me.jpg'));
