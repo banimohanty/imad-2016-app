@@ -120,7 +120,7 @@ function createTemplate (data) {
 	     		$('select').material_select();
 		$('.modal-trigger').leanModal();
 			$('.scrollspy').scrollSpy();
-      $('.carousel').carousel();
+  
     });
 		
 	</script>
