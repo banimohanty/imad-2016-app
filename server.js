@@ -42,6 +42,15 @@ function createTemplate (data) {
     var htmlTemplate = `
     <html>
       <head>
+       <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content ="IE=edge">
+    <meta name = "viewpoint" content ="width=device-width,initial-scale=1">
+    <!--meta http-equiv="Content-Type" content="text/html; charset=windows-1252" -->
+
+    <link href="ui/material-icons.css" rel="stylesheet"/>
+	<!--Import materialize.css-->
+	<link rel="stylesheet" href="ui/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="ui/materialize.min.css" />
           <title>
               ${title}
           </title>
@@ -49,10 +58,38 @@ function createTemplate (data) {
           <link href="/ui/style.css" rel="stylesheet" />
       </head> 
       <body>
-          <div class="container">
-              <div>
-                  <a href="/">Home</a>
-              </div>
+         <header>
+		<nav>
+			<div class="nav-wrapper"> <a href="#!" class="brand-logo">Personal Blog</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+				<ul class="right hide-on-med-and-down">
+					<div id="login_area">
+                <center>Loading login status...</center>
+            </div>
+				</ul>
+			
+			</div>
+		</nav>
+	</header>
+<div class="col hide-on-small-only m3 l2">
+			<div class="toc-wrapper pinned">
+			<div style="height: 1px;">
+			<ul class="section table-of-contents">
+        	<li><a href="/" class="waves-effect">Home</a>
+			</li>
+			<li><a href="/ui/resume" target="blank">My Resume</a></li>
+			
+				</ul>
+			
+			</div>
+			</div>
+		
+		</div>
+	<div class="main-container row" style="background: none; border: none;">
+		
+		<div class="col s12 m10 l10 offset-l1 offset-s1 offset-m1">
+		<br>
+			<div class="card-panel blue-grey lighten-5 z-depth-5">
+              
               <hr/>
               <h3>
                   ${heading}
@@ -70,6 +107,8 @@ function createTemplate (data) {
               <div id="comments">
                 <center>Loading comments...</center>
               </div>
+          </div>
+          </div>
           </div>
           <script type="text/javascript" src="/ui/article.js"></script>
       </body>
