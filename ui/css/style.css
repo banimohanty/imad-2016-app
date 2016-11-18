@@ -112,7 +112,7 @@ figcaption{
 	position: absolute;
 	color: #fff;
 	font-family: 'Nunito', sans-serif;
-	top: 110px;
+	top: 50px;
 	left: 100px;
 	text-shadow: 0 3px rgba(0,0,0,0.5);
 }
@@ -286,7 +286,7 @@ figcaption{
 	}
 
 	.banner_content {
-		top: 100px;
+		top: 50px;
 		left: 340px;
 	}
 
@@ -308,7 +308,7 @@ figcaption{
 	}
 
 	.banner_content {
-		top: 110px;
+		top: 50px;
 		left: 550px;
 	}
 }
