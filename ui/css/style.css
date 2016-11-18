@@ -104,8 +104,8 @@ figcaption{
 	background-image: url('/ui/img/back.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 300px;
-	filter: blur(4px);
+	height: 200px;
+	filter: blur(2px);
 }
 
 .banner_content {
