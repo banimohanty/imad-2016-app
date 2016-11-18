@@ -66,10 +66,13 @@ body {
               <img id='me' src="/ui/me.jpg" heigth="200" width ="200" /> 
           </div>
           <div id="gallery">
-           
-  <img src="/ui/img/back.jpg" heigth="100" width ="100">
-  <img src="/ui/img/back.jpg" heigth="100" width ="100">
-  
+            <div class="carousel carousel-slider">
+    <a class="carousel-item" href="#one!"><img src="/ui/back.jpg" heigth="100" width ="100"></a>
+    <a class="carousel-item" href="#two!"><img src="/ui/Website-Design-Background-1.jpg" heigth="100" width ="100"></a>
+    <a class="carousel-item" href="#three!"><img src="/ui/me.jpg" heigth="100" width ="100"></a>
+    <a class="carousel-item" href="#four!"><img src="/ui/madi.png" heigth="100" width ="100"></a>
+    <a class="carousel-item" href="#five!"><img src="/ui/back.jpg" heigth="100" width ="100"></a>
+  </div>
   </div>
           <div id="about">
               <center>
@@ -114,7 +117,7 @@ body {
 		$('.modal-trigger').leanModal();
 			$('.scrollspy').scrollSpy();
       
-       $('.carousel').carousel({full_width: true});
+       $('.carousel.carousel-slider').carousel({full_width: true});
     });
 		
 	</script>
