@@ -227,11 +227,17 @@ app.get('/articles/:articleName', function (req, res) {
   });
 });
 
-var open = require('open');
+var express = require('express'),
+    fs = require('fs'),
+    app = express();
 
-open('/ui/resume.html', function (err) {
-  if (err) throw err;
-  console.log('The user closed the browser');
+app.get('/ui/resume', function (req, res) {
+    var filePath = "/files/resume.pdf";
+
+    fs.readFile(__dirname + filePath , function (err,data){
+        res.contentType("application/pdf");
+        res.send(data);
+    });
 });
 
 app.get('/ui/me.jpg', function (req, res) {
