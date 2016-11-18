@@ -3,6 +3,7 @@ function loadLoginForm () {
         <div class="row">
         <div class="col l3">
         <h5>Login/Register</h5>
+        <font color="black">
         </div>
           <div class="col l2" >
         <input type="text" id="username" placeholder="username" style="text-color:black" />
@@ -15,6 +16,7 @@ function loadLoginForm () {
          </div>
           <div class="col l2">
         <input type="submit" id="register_btn" value="Register" />
+        </font>
         </div>
         </div>
         `;
