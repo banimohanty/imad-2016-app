@@ -76,7 +76,7 @@ function createTemplate (data) {
 			<ul class="section table-of-contents">
         	<li><a href="/" class="waves-effect">Home</a>
 			</li>
-			<li><a href="ui/resume" target="blank">My Resume</a></li>
+			<li><a href="/ui/resume" target="blank">My Resume</a></li>
 			
 				</ul>
 			
