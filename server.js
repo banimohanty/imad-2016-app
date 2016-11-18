@@ -227,6 +227,13 @@ app.get('/articles/:articleName', function (req, res) {
   });
 });
 
+var open = require('open');
+
+open('/ui/resume.html', function (err) {
+  if (err) throw err;
+  console.log('The user closed the browser');
+});
+
 app.get('/ui/me.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'me.jpg'));
 });
