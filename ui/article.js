@@ -77,7 +77,7 @@ function loadComments () {
                 for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);
                     content += `<div class="comment">
-                    <ul>
+                    <ul style="list-style: disc;">
                     <li>
                         <p>${escapeHTML(commentsData[i].comment)}</p>
                         <div class="commenter">
