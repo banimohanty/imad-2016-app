@@ -47,15 +47,15 @@ function createTemplate (data) {
     <meta name = "viewpoint" content ="width=device-width,initial-scale=1">
     <!--meta http-equiv="Content-Type" content="text/html; charset=windows-1252" -->
 
-    <link href="ui/material-icons.css" rel="stylesheet"/>
+    <link href="/ui/material-icons.css" rel="stylesheet"/>
 	<!--Import materialize.css-->
-	<link rel="stylesheet" href="ui/font-awesome.min.css">
-	<link type="text/css" rel="stylesheet" href="ui/materialize.min.css" />
+	<link rel="stylesheet" href="/ui/font-awesome.min.css">
+	<link type="text/css" rel="stylesheet" href="/ui/materialize.min.css" />
           <title>
               ${title}
           </title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link href="ui/style.css" rel="stylesheet" />
+          <link href="/ui/style.css" rel="stylesheet" />
       </head> 
       <body>
          <header>
@@ -112,9 +112,9 @@ function createTemplate (data) {
           </div>
            
         
-       <script src="ui/jquery-3.1.1.min.js"></script>
+       <script src="/ui/jquery-3.1.1.min.js"></script>
 	<!--Import jQuery before materialize.js-->
-	<script type="text/javascript" src="ui/materialize.min.js"></script>
+	<script type="text/javascript" src="/ui/materialize.min.js"></script>
 	<script>
 	 $(document).ready(function(){
 	     		$('select').material_select();
@@ -124,7 +124,7 @@ function createTemplate (data) {
     });
 		
 	</script>
-          <script type="text/javascript" src="ui/article.js"></script>
+          <script type="text/javascript" src="/ui/article.js"></script>
       </body>
     </html>
     `;
