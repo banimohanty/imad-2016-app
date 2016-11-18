@@ -55,12 +55,12 @@ function createTemplate (data) {
               ${title}
           </title>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <link href="/ui/style.css" rel="stylesheet" />
+          <link href="ui/style.css" rel="stylesheet" />
       </head> 
       <body>
          <header>
 		<nav>
-			<div class="nav-wrapper"> <a href="#!" class="brand-logo">Personal Blog</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+			<div class="nav-wrapper"> <a href="/" class="brand-logo">Personal Blog</a> <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 				<ul class="right hide-on-med-and-down">
 					<div id="login_area">
                 <center>Loading login status...</center>
@@ -76,7 +76,7 @@ function createTemplate (data) {
 			<ul class="section table-of-contents">
         	<li><a href="/" class="waves-effect">Home</a>
 			</li>
-			<li><a href="/ui/resume" target="blank">My Resume</a></li>
+			<li><a href="ui/resume" target="blank">My Resume</a></li>
 			
 				</ul>
 			
@@ -112,9 +112,9 @@ function createTemplate (data) {
           </div>
            
         
-       <script src="/ui/jquery-3.1.1.min.js"></script>
+       <script src="ui/jquery-3.1.1.min.js"></script>
 	<!--Import jQuery before materialize.js-->
-	<script type="text/javascript" src="/ui/materialize.min.js"></script>
+	<script type="text/javascript" src="ui/materialize.min.js"></script>
 	<script>
 	 $(document).ready(function(){
 	     		$('select').material_select();
@@ -124,7 +124,7 @@ function createTemplate (data) {
     });
 		
 	</script>
-          <script type="text/javascript" src="/ui/article.js"></script>
+          <script type="text/javascript" src="ui/article.js"></script>
       </body>
     </html>
     `;
