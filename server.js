@@ -110,6 +110,20 @@ function createTemplate (data) {
           </div>
           </div>
           </div>
+           <script type="text/javascript" src="/ui/main.js">
+        </script>
+       <script src="/ui/jquery-3.1.1.min.js"></script>
+	<!--Import jQuery before materialize.js-->
+	<script type="text/javascript" src="/ui/materialize.min.js"></script>
+	<script>
+	 $(document).ready(function(){
+	     		$('select').material_select();
+		$('.modal-trigger').leanModal();
+			$('.scrollspy').scrollSpy();
+      $('.carousel').carousel();
+    });
+		
+	</script>
           <script type="text/javascript" src="/ui/article.js"></script>
       </body>
     </html>
