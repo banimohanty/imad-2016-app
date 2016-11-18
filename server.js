@@ -227,6 +227,23 @@ app.get('/articles/:articleName', function (req, res) {
   });
 });
 
+app.get('/ui/me.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'me.jpg'));
+});
+app.get('/ui/madi.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'madi.jpg'));
+});
+app.get('/ui/back.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'back.jpg'));
+});
+app.get('/ui/Website-Design-Background-1.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'Website-Design-Background-1.jpg'));
+});
+
+app.get('/ui/back.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'back.jpg'));
+});
+
 app.get('/ui/:fileName', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', req.params.fileName));
 });
